@@ -1,0 +1,15 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<style>
+	table, td ,tr {
+  border-collapse: collapse;
+  border: 1px solid black; 
+}
+</style>
+<ul>
+	<li><a href='<c:url value="/"/>'>Home Page</a></li>
+	<li><a href="">Link 2</a></li>
+	<li><a href="LoadGroups">Groups</a></li>
+	<li><a href=#>Link 4</a></li>
+</ul>
