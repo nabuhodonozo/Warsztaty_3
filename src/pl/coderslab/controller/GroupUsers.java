@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import pl.coderslab.model.model.User;
+import pl.coderslab.model.User;
 
 @WebServlet("/GroupUsers")
 public class GroupUsers extends HttpServlet {

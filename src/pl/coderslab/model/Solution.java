@@ -1,4 +1,4 @@
-package pl.coderslab.model.model;
+package pl.coderslab.model;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -7,7 +7,6 @@ import java.util.ArrayList;
 import java.util.Date;
 
 import pl.coderslab.model.DbUtil;
-import pl.coderslab.model.DbUtil1;
 
 
 public class Solution {
@@ -253,7 +252,7 @@ public class Solution {
 		ArrayList<Solution> solution = new ArrayList<Solution>();
 		String	sql	= "SELECT * FROM Solution ORDER BY created LIMIT " + limit;
 		PreparedStatement preparedStatement;
-		preparedStatement = DbUtil1.getConn().prepareStatement(sql);
+		preparedStatement = DbUtil.connect().prepareStatement(sql);
 		ResultSet resultSet = preparedStatement.executeQuery();
 		while (resultSet.next()) {
 			Solution loadedSolution = new Solution();

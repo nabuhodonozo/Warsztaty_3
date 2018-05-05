@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import pl.coderslab.model.model.Solution;
+import pl.coderslab.model.Solution;
 
 @WebServlet("/")
 public class Home extends HttpServlet {

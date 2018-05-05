@@ -9,21 +9,26 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import pl.coderslab.model.User;
+import pl.coderslab.model.Solution;
 
-@WebServlet("/DetailsUser")
-public class DetailsUser extends HttpServlet {
+@WebServlet("/Szczegoly")
+public class DetailsGroup extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
-    public DetailsUser() {
+    public DetailsGroup() {
     }
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		try {
-			request.setAttribute("user", User.loadUserById(Integer.parseInt(request.getParameter("id"))));
-			getServletContext().getRequestDispatcher("/META-INF/DetailsUser.jsp").forward(request, response);
+			request.setAttribute("solutionById", Solution.loadSolutionById(Integer.parseInt(request.getParameter("id"))));
 		} catch (NumberFormatException | SQLException e) {
 			e.printStackTrace();
 		}
+		getServletContext().getRequestDispatcher("/META-INF/szczegoly.jsp").forward(request, response);
 	}
+
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		doGet(request, response);
+	}
+
 }

@@ -1,9 +1,11 @@
-package pl.coderslab.model.model;
+package pl.coderslab.model;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+
+import pl.coderslab.model.DbUtil;
 
 
 public class Exercise {

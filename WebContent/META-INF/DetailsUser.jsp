@@ -5,20 +5,25 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Groups</title>
+<title>User Details</title>
 <%@ include file="/META-INF/header.jspf"%>
 </head>
 <body>
 		
 	
 	<table style="border: 1px solid black">
-		<c:forEach items="${users}" var="user">
-			<tr>
-				<td><c:out value="${user.username }"/></td>
-				<td><c:out value="${user.email }"/></td>
-				<td><a href="DetailsUser?id=${user.id }">Szczególy</a></td>
-			</tr>
-		</c:forEach>
+		<tr>
+			<th>Name</th>
+			<th>Email</th>
+			<th>Password</th>
+			<th>Group_id</th>
+		</tr>
+		<tr>
+			<td><c:out value="${user.username }"/></td>
+			<td><c:out value="${user.email }"/></td>
+			<td><c:out value="${user.password }"/></td>
+			<td><c:out value="${user.person_group_id }"/></td>
+		</tr>
 	</table>
 	<%@	include file="/META-INF/footer.jspf"%>
 </body>

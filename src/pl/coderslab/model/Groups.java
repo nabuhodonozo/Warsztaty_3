@@ -1,4 +1,4 @@
-package pl.coderslab.model.model;
+package pl.coderslab.model;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
